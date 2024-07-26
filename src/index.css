@@ -15,19 +15,19 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: black;
   text-decoration: inherit;
 }
+
 a:hover {
-  color: #535bf2;
+  color: green;
 }
 
 body {
   margin: 0;
-  display: flex;
+
   place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+
 }
 
 h1 {
@@ -46,9 +46,12 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
-  border-color: #646cff;
+  counter-reset: green;
+  border-color: green;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -58,10 +61,11 @@ button:focus-visible {
   :root {
     color: #213547;
     background-color: #ffffff;
+    --color-active: green;
+    --color-bg: #2C2C32;
   }
-  a:hover {
-    color: #747bff;
-  }
+
+
   button {
     background-color: #f9f9f9;
   }

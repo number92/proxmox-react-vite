@@ -1,35 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import SidebarMenu from './components/sidebar/Sidebar'
+import VmsPool from './components/vms/Vmspool'
+import { Routes, Route, Outlet } from 'react-router-dom'
+import { HomePage } from './pages/HomePages'
+import { Notfoundpage } from './pages/Notfoundpage'
+import { VmPannel } from './pages/vmpannel/VmPannel'
+import { ConfigVm } from './components/controlpannel/config/ConfigVm'
 
-function App() {
-  const [count, setCount] = useState(0)
 
+export default function App() {
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
+      <div className='main-container'>
+
+        <aside>
+          <SidebarMenu />
+        </aside>
+        <main className='main-content'>
+
+          <Routes>
+            <Route path='/' element={<HomePage />} />
+            <Route path='/vms' element={<VmsPool />} />
+            <Route path='/vms/:service_group_id/*' element={<VmPannel />}>
+
+            </Route>
+
+            <Route path='*' element={<Notfoundpage />} />
+
+          </Routes>
+
+        </main>
+
+      </div >
     </>
   )
 }
 
-export default App

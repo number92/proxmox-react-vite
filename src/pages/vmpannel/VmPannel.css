@@ -1,0 +1,59 @@
+.vm-pannel {
+    width: 100%;
+}
+
+.vm-pannel h4 {
+    text-align: center;
+    padding-bottom: 20px;
+    color: rgb(76, 72, 72);
+}
+
+.nav-switcher {
+    border-bottom: 1px solid rgb(206, 206, 206);
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-switcher a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #fff;
+    position: relative;
+}
+
+a:hover {
+    color: green;
+}
+
+.active {
+    color: green;
+
+
+}
+
+.nav-switcher a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -11px;
+    left: 0;
+    right: 0;
+    height: 3%;
+
+    background-color: green;
+}
+
+.back {
+    float: right;
+    margin: 30px;
+    clear: both;
+}
+
+.back:hover {
+
+    color: green;
+}

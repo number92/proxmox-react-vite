@@ -1,0 +1,36 @@
+.conf-stat {
+    display: flex;
+    width: 100%;
+}
+
+.configuration {
+    flex: 0 0 40%;
+    min-width: 180px;
+    border-right: 1px solid #ccc;
+    padding: 20px;
+
+}
+
+.configuration div {
+
+    display: flex;
+
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    justify-content: space-between;
+}
+
+.configuration div span {
+    margin-right: 10px;
+}
+
+.statistics {
+    flex: 0 0 60%;
+}
+
+.loading {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

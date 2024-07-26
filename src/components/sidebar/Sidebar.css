@@ -1,0 +1,53 @@
+.sidebar {
+
+    height: 100vh;
+    max-width: 250px;
+    background-color: #fdfdfd;
+
+    order: 1;
+    padding: 10px;
+    /* Добавьте немного отступа к sidebar */
+    border-right: 1px solid #ccc;
+}
+
+.sidebar ul {
+    list-style: none;
+    /* Удалите пули из списка */
+    padding: 0;
+    /* Удалите отступ у списка */
+    margin: 0;
+    /* Удалите отступ у списка */
+}
+
+.sidebar li {
+    padding: 10px 0;
+    /* Добавьте отступ к элементам списка */
+
+    /* Добавьте рамку снизу к каждому элементу списка */
+    text-align: left;
+    /* Выровняйте текст по центру в каждом элементе списка */
+    cursor: pointer;
+    /* Добавьте указатель при наведении на каждый элемент списка */
+}
+
+.sidebar li strong {
+    text-align: center;
+}
+
+.sidebar li strong:hover {
+    color: green;
+
+}
+
+.sidebar li:last-child {
+    border-bottom: none;
+    /* Удалите рамку снизу у последнего элемента списка */
+}
+
+.sidebar li img {
+    padding-right: 5px;
+}
+
+.sidebar strong {
+    color: rgb(98, 73, 241);
+}

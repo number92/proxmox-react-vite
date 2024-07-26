@@ -1,0 +1,87 @@
+.vms {
+
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    overflow-y: auto;
+    order: 2;
+}
+
+.vm-box {
+    width: 400px;
+    margin: 10px 10px;
+    padding: 10px;
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer
+}
+
+.vm-box:hover {
+
+    background-color: rgb(238, 236, 247);
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.vm-box p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    margin: 0px 5px;
+}
+
+.vm-box h4 {
+    margin: 2px 5px;
+    color: rgb(110, 110, 110);
+}
+
+.vm-status {
+    position: absolute;
+    right: 40px;
+    bottom: 10px;
+}
+
+.vm-status b {
+    padding: 5px;
+}
+
+.blink {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    border-color: green;
+    background: green;
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+    box-shadow: 0 0 2px 1px rgb(6, 117, 39);
+    animation-name: blink;
+    animation-timing-function: linear;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    ;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0.3;
+    }
+}
+
+.active-status {
+    box-shadow: 0 0 3px 3px rgb(209, 209, 209);
+    border: 2px solid rgb(216, 248, 216);
+    background-color: rgb(229, 247, 229);
+}
+
+
+.stopped-status {
+    box-shadow: 0 0 10px 5px grey;
+    border: 2px solid lightgrey;
+    background-color: rgb(173, 173, 173);
+}
+
+.light-red-container {
+    box-shadow: 0 0 10px 5px lightcoral;
+    border: 2px solid pink;
+    background-color: rgb(238, 175, 175);
+}
