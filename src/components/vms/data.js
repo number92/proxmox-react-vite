@@ -1,17 +1,17 @@
 
 export const dataVms = [
     {
-        service_group_id: 7,
+        service_id: 4,
         vmname: "N1",
-        vmid: "101",
+        vmid: "1005",
         agrement_id: "LNBU-3556",
-        ip: "127.0.0.1"
+        ip: "10.2.8.122"
     },
     {
-        service_group_id: 8,
-        vmid: "100",
+        service_id: 10,
+        vmid: "1006",
         agrement_id: "LKNG-3522",
         vmname: "Backup",
-        ip: "127.0.0.1"
+        ip: "10.2.8.11"
     },
 ];

@@ -3,14 +3,14 @@ import { useState, useEffect } from 'react';
 import './ConfigVm.css'
 
 function ConfigVm() {
-    const { service_group_id } = useParams();
+    const { service_id } = useParams();
     const [data, setData] = useState(null);
 
     useEffect(() => {
         // Асинхронная функция, которая загружает данные
         async function fetchData() {
             try {
-                const response = await fetch(`http://localcenter/api/${service_group_id}/conf`);
+                const response = await fetch(`https://localcenter.ru/api/v1/proxmox/${service_id}/conf`);
                 const data = await response.json();
                 setData(data);
             } catch (error) {

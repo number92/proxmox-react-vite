@@ -7,10 +7,10 @@
 }
 
 .iframe {
-    width: 100%;
+    width: 60%;
     height: 45vh;
     max-width: 85%;
     max-height: 85%;
     margin: 30px;
-    background: rgb(153, 152, 152);
+    /* background: rgb(153, 152, 152); */
 }
