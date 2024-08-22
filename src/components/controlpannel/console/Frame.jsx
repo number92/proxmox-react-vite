@@ -1,4 +1,3 @@
-import './ConsoleVm.css'
 import '@xterm/xterm/css/xterm.css'
 import {
     urlEncode,
@@ -15,7 +14,8 @@ import '@xterm/xterm/css/xterm.css'
 import { Terminal } from '@xterm/xterm';
 import { FitAddon } from '@xterm/addon-fit';
 import { WebglAddon } from '@xterm/addon-webgl';
-function ConsoleVm() {
+
+function ConsoleInIframe() {
     // try {
 
     const { service_group_id } = useParams();
@@ -351,6 +351,20 @@ function ConsoleVm() {
         // }
     }, []);
 
+    return (
+        <>
+            <div id="status_bar"></div>
+            <div id="wrap">
+                <div className="center">
+                    <div id="connect_dlg">
+                        <div id="pve_start_info">Guest not running</div>
+                        <div id="connect_btn"><div> Start Now </div></div>
+                    </div>
+                </div>
+                <div id="terminal-container"></div>
+            </div>
+        </>
+    )
 
     // setData(true);
     // fetchData();
@@ -377,26 +391,6 @@ function ConsoleVm() {
     // } catch (err) {
     //     console.error("Ошибка в iframe", err);
     // }
-    return (
-
-        <div className='console-card'>
-
-            <div id="status_bar"></div>
-            <div id="wrap">
-                <div className="center">
-                    <div id="connect_dlg">
-                        <div id="pve_start_info">Guest not running</div>
-                        <div id="connect_btn"><div> Start Now </div></div>
-                    </div>
-                </div>
-                <div id="terminal-container"></div>
-            </div>
-
-        </div >
-
-
-    )
-
 }
 
-export { ConsoleVm }
+export { ConsoleInIframe }

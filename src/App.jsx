@@ -22,7 +22,7 @@ export default function App() {
           <Routes>
             <Route path='/' element={<HomePage />} />
             <Route path='/vms' element={<VmsPool />} />
-            <Route path='/vms/:service_id/*' element={<VmPannel />}>
+            <Route path='/vms/:service_group_id/*' element={<VmPannel />}>
 
             </Route>
 

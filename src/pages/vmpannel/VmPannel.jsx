@@ -27,11 +27,11 @@ function VmPannel() {
                     <Route path='send-ticket' element={<SendTicket />} />
                 </Route>
             </Routes>
-            <div>
 
-                <button className='button btn back' onClick={goBack}>Назад</button>
-            </div>
+
+            <button className='button btn back' onClick={goBack}>Назад</button>
         </div>
+
 
     )
 }
