@@ -19,6 +19,13 @@ var severities = {
     error: 3,
 };
 
+
+function detectWebgl() {
+    const canvas = document.createElement("canvas");
+    const gl = canvas.getContext("webgl2", { failIfMajorPerformanceCaveat: true });
+    return !!gl;
+}
+
 function showMsg(message, timeout, severity) {
     var status_bar = document.getElementById('status_bar');
     clearTimeout(msgtimeout);
@@ -196,5 +203,6 @@ export {
     getQueryParameter,
     API2Request,
     getTerminalSettings,
-    severities
+    severities,
+    detectWebgl
 }
