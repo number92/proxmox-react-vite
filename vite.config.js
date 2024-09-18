@@ -7,8 +7,8 @@ import fs from 'fs'
 export default defineConfig({
   server: {
     https: {
-      key: fs.readFileSync('/home/arav/.ssl/dev.iqdata.key'),
-      cert: fs.readFileSync('/home/arav/.ssl/dev.iqdata.crt'),
+      key: fs.readFileSync('./ca/dev.iqdata.key'),
+      cert: fs.readFileSync('./ca/dev.iqdata.crt'),
     }
   }, // Not needed for Vite 5+
   plugins: [react()]

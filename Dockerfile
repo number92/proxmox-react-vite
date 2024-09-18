@@ -2,5 +2,6 @@ FROM node:18.19.0-alpine
 WORKDIR /app
 COPY package*.json ./
 RUN npm install --production
-COPY . ./
+COPY . .
 RUN npm run build
+CMD cp -r ./dist /frontend

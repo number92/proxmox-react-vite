@@ -129,11 +129,13 @@ function StartConsole() {
                     // socketURL = protocol + location.hostname + ((location.port) ? (':' + location.port) : '') + '/api2/json' + url + '/vncwebsocket?port=' + port + '&vncticket=' + encodeURIComponent(ticket);
 
                     socket = new WebSocket(socketURL, 'binary');
+
                     socket.binaryType = 'arraybuffer';
                     socket.onopen = runTerminal;
                     socket.onclose = tryReconnect;
                     socket.onerror = tryReconnect;
                     updateState(states.connecting);
+                    document.addEventListener('beforeonunload', () => { socket.close() });
                 },
                 failure: function (msg) {
                     console.log(msg)
@@ -257,10 +259,6 @@ function StartConsole() {
                     fitAddon.fit();
                 }, 250);
             });
-
-            //NOTE: ??????
-            //socket.send('root' + ':' + "ticket" + "\n");
-
             // initial focus and resize
             setTimeout(function () {
                 term.focus();
